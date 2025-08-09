@@ -1,0 +1,54 @@
+Conclusiones del ejercicio 1 - SELENIUM
+========================================
+
+Resultados obtenidos:
+---------------------
+Al ejecutar la clase `CompraTest`, el navegador Chrome se abre y se ejecuta paso a paso el flujo de compra en OpenCart.
+Si todo funciona correctamente, se muestra en consola el mensaje:
+"✅ Compra realizada con éxito"
+y en la página se observa el mensaje "Your order has been placed!".
+
+Posibles problemas detectados:
+------------------------------
+- La página puede cambiar de diseño o estructura, provocando fallos en los selectores XPath o ID.
+- El uso de Thread.sleep() puede ralentizar la ejecución y no garantiza sincronización precisa.
+- Si la conexión es lenta o el servidor de prueba no responde, el script puede fallar.
+- Algunos campos como país y región usan rutas XPath absolutas, lo que no es flexible ante cambios de estructura.
+- Se debe cambiar el correo en cada ejecución.
+
+Mejoras recomendadas:
+---------------------
+1. Reemplazar `Thread.sleep()` por `WebDriverWait` con condiciones explícitas.
+2. Usar selectores CSS o XPath relativos para mayor robustez.
+3. Manejar excepciones específicas y agregar capturas de pantalla en caso de error.
+4. Parametrizar los datos (nombre, email, productos) para poder reutilizar el script con diferentes entradas, como por ejemplo excel.
+
+Conclusiones del ejercicio 2 - PRUEBAS API PETSTORE
+=================================================
+
+Facilidad de uso de Karate DSL
+-------------------------------
+   Karate resultó ser una herramienta muy eficiente para la automatización de pruebas de servicios REST, 
+   ya que permite escribir escenarios en Gherkin con sintaxis simple y soporta validaciones JSON, variables 
+   y extracción de datos sin necesidad de código Java adicional.
+
+Validación de flujo completo
+----------------------------
+   Se logró implementar un flujo de pruebas que incluye:
+   1. Creación de un usuario
+   2. Consulta del usuario creado
+   3. Actualización del nombre y correo
+   4. Consulta del usuario actualizado
+   5. Eliminación del usuario
+   Esto permitió confirmar que la API de PetStore maneja correctamente las operaciones CRUD.
+
+Manejo de variables y datos dinámicos
+-------------------------------------
+   Karate permitió almacenar datos de las respuestas (por ejemplo, `username`) y reutilizarlos 
+   en peticiones posteriores, lo cual es esencial para pruebas integradas.
+
+Reportes automáticos
+---------------------
+   La ejecución genera reportes HTML con el detalle de cada escenario, evidenciando los request, 
+   response, headers y tiempos de respuesta, lo que facilita la trazabilidad.
+
