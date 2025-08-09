@@ -26,12 +26,6 @@ Mejoras recomendadas:
 Conclusiones del ejercicio 2 - PRUEBAS API PETSTORE
 =================================================
 
-Facilidad de uso de Karate DSL
--------------------------------
-   Karate resultó ser una herramienta muy eficiente para la automatización de pruebas de servicios REST, 
-   ya que permite escribir escenarios en Gherkin con sintaxis simple y soporta validaciones JSON, variables 
-   y extracción de datos sin necesidad de código Java adicional.
-
 Validación de flujo completo
 ----------------------------
    Se logró implementar un flujo de pruebas que incluye:
