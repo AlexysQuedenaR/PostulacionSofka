@@ -1,0 +1,19 @@
+Resultado de prueba del Ejercio 01
+==================================
+  
+Resumen general de la prueba
+-----------------------------
+
+Total de muestras: 600
+Solicitudes exitosas: 600
+Solicitudes fallidas: 0
+Tasa de éxito: 100 %
+
+Rendimiento (tiempos de respuesta)
+-----------------------------------
+
+Tiempo promedio de respuesta: 419 ms
+Tiempo mínimo: 400 ms
+Tiempo máximo: 1086 ms
+
+tal como indica el ejercicio no se supera el tiempo de respuesta permitido de 1.5 seg y la tasa de error es de 0.0%
